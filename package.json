@@ -1,0 +1,27 @@
+{
+  "name": "arp-listener",
+  "version": "0.0.0",
+  "description": "ARP Scan",
+  "main": "index.js",
+  "scripts": {
+    "test": "standard && mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:bencevans/node-arp-scan.git"
+  },
+  "keywords": [
+    "ARP",
+    "Scan",
+    "Discovery"
+  ],
+  "author": "Ben Evans <ben@bensbit.co.uk> (http://bensbit.co.uk)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bencevans/node-arp-scan/issues"
+  },
+  "homepage": "https://github.com/bencevans/node-arp-scan",
+  "dependencies": {
+    "pcap": "^2.0.1"
+  }
+}
