@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:bencevans/node-arp-scan.git"
+    "url": "git@github.com:bencevans/node-arp-listener.git"
   },
   "keywords": [
     "ARP",
@@ -18,9 +18,9 @@
   "author": "Ben Evans <ben@bensbit.co.uk> (http://bensbit.co.uk)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/bencevans/node-arp-scan/issues"
+    "url": "https://github.com/bencevans/node-arp-listener/issues"
   },
-  "homepage": "https://github.com/bencevans/node-arp-scan",
+  "homepage": "https://github.com/bencevans/node-arp-listener",
   "dependencies": {
     "pcap": "^2.0.1"
   }
