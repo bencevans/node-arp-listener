@@ -22,6 +22,6 @@
   },
   "homepage": "https://github.com/bencevans/node-arp-listener",
   "dependencies": {
-    "pcap": "^2.0.1"
+    "pcap": "git+ssh://git@github.com/mranney/node_pcap.git#d920204745c8b00ef4b7a3fe27d902b263cdb70f"
   }
 }
