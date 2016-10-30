@@ -13,26 +13,17 @@ function bufferToHardwareAddress (buffer) {
   hexArray[10] + hexArray[11]
 }
 
-function bufferToProtocolAddress(buffer) {
-  return buffer.readUIntBE(0, 1) + '.' + buffer.readUIntBE(1, 1) + '.' + buffer.readUIntBE(2, 1) + '.' + buffer.readUIntBE(3, 1)
-}
+function listen (iface, arpPacketListener) {
+  var pcapSession = pcap.createSession(iface, 'arp')
 
-function listen (interface, arpPacketListener) {
-
-  var pcapSession = pcap.createSession(interface, 'arp')
-
-  pcapSession.on('packet', function(rawPacket) {
-
-    var packet = pcap.decode.packet(rawPacket).payload.payload;
+  pcapSession.on('packet', function (rawPacket) {
+    var packet = pcap.decode.packet(rawPacket).payload.payload
 
     packet.sender_ha = bufferToHardwareAddress(new Buffer(packet.sender_ha.addr))
     packet.target_ha = bufferToHardwareAddress(new Buffer(packet.target_ha.addr))
 
     arpPacketListener(packet)
-
-
   })
-
 }
 
 module.exports = listen
